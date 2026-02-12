@@ -13,14 +13,11 @@ class Zigdex < Formula
   end
 
   def install
-    if Hardware::CPU.arm?
-      bin.install "zigdex-aarch64-macos" => "zigdex"
-    else
-      bin.install "zigdex-x86_64-macos" => "zigdex"
-    end
+    chmod 0755, "zigdex"
+    bin.install "zigdex"
   end
 
   test do
-    assert_match "zigdex", shell_output("#{bin}/zigdex --help")
+    system "#{bin}/zigdex", "--help"
   end
 end
