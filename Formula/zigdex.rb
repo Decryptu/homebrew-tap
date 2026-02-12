@@ -1,15 +1,15 @@
 class Zigdex < Formula
   desc "Display Pokemon sprites in your terminal, powered by Zig"
   homepage "https://github.com/Decryptu/zigdex"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.1/zigdex-v0.2.1-aarch64-macos.tar.gz"
-    sha256 "46037ddd4ba599d0486a96483e8cb322dc6560131c545aba6fd7736fe0adeaa8"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.2/zigdex-v0.2.2-aarch64-macos.tar.gz"
+    sha256 "ad21165bd9a769b456d1fd0468aaede49ab5835db90f0962dcd698dbe254953d"
   else
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.1/zigdex-v0.2.1-x86_64-macos.tar.gz"
-    sha256 "359143f25f957265e0088125653cc1e7e3733b943c1825dd1b2af760c2f8be7e"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.2/zigdex-v0.2.2-x86_64-macos.tar.gz"
+    sha256 "98e8593df31599a8b6f98ef9fd666ded29392aedc25b12b2c739a74a7e3a2d41"
   end
 
   def install
