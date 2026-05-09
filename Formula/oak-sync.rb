@@ -1,8 +1,8 @@
 class OakSync < Formula
   desc "CLI tool for syncing Oak Research production branches with preprod"
   homepage "https://github.com/Decryptu/oak-sync"
-  url "https://github.com/Decryptu/oak-sync/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "024fee5b0de7a178cb66f9e5009e3fe0b48b5e3f998796779b50358e04ee6797"
+  url "https://github.com/Decryptu/oak-sync/archive/refs/tags/v1.0.3.tar.gz"
+  sha256 "770aef21fb8ffe78ebb592d83801a2c65cf5c3492f7af4d6357f2ec41c44266f"
   license "MIT"
 
   depends_on "gum"
