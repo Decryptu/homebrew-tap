@@ -13,7 +13,7 @@ class OakSync < Formula
 
   test do
     # Test that the script exists and is executable
-    assert_predicate bin/"oak-sync", :exist?
+    assert_path_exists bin/"oak-sync"
     assert_predicate bin/"oak-sync", :executable?
 
     # Test that gum dependency is available
