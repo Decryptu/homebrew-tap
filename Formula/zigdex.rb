@@ -1,23 +1,24 @@
 class Zigdex < Formula
   desc "Display Pokemon sprites in your terminal, powered by Zig"
   homepage "https://github.com/Decryptu/zigdex"
-  version "0.2.2"
   license "MIT"
 
+  depends_on :macos
+
   if Hardware::CPU.arm?
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.2/zigdex-v0.2.2-aarch64-macos.tar.gz"
-    sha256 "ad21165bd9a769b456d1fd0468aaede49ab5835db90f0962dcd698dbe254953d"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.3.0/zigdex-v0.3.0-aarch64-macos.tar.gz"
+    sha256 "c6a1d43de4cf6920d43f9ef1c134186aeeee2e1e322c1360b691a31beb47f050"
   else
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.2.2/zigdex-v0.2.2-x86_64-macos.tar.gz"
-    sha256 "98e8593df31599a8b6f98ef9fd666ded29392aedc25b12b2c739a74a7e3a2d41"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.3.0/zigdex-v0.3.0-x86_64-macos.tar.gz"
+    sha256 "cd7d24d9ffed621807e0a7bc896e46dd1b89cf52d62d3ad911f61ea4892c7b39"
   end
 
   def install
-    chmod 0755, "zigdex"
     bin.install "zigdex"
   end
 
   test do
-    system "#{bin}/zigdex", "--help"
+    assert_match "Usage: zigdex", shell_output("#{bin/"zigdex"} --help")
+    assert_match "Pikachu", shell_output("#{bin/"zigdex"} pikachu")
   end
 end
