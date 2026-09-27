@@ -6,11 +6,11 @@ class Zigdex < Formula
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.3.0/zigdex-v0.3.0-aarch64-macos.tar.gz"
-    sha256 "c6a1d43de4cf6920d43f9ef1c134186aeeee2e1e322c1360b691a31beb47f050"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.4.0/zigdex-v0.4.0-aarch64-macos.tar.gz"
+    sha256 "5bb22ee64a32cb2cd7896bc7d86dbaa9def62bed48b95f14cc0bdaed19e73c31"
   else
-    url "https://github.com/Decryptu/zigdex/releases/download/v0.3.0/zigdex-v0.3.0-x86_64-macos.tar.gz"
-    sha256 "cd7d24d9ffed621807e0a7bc896e46dd1b89cf52d62d3ad911f61ea4892c7b39"
+    url "https://github.com/Decryptu/zigdex/releases/download/v0.4.0/zigdex-v0.4.0-x86_64-macos.tar.gz"
+    sha256 "acf1440eb359f295221210095637c04e6fa077e9ae99fc336ae8227568915d50"
   end
 
   def install
